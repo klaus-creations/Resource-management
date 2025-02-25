@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Provider } from "react-redux";
 
@@ -10,9 +12,8 @@ interface PageWrapperProps {
 export default function PageWrapper({ children }: PageWrapperProps) {
   return (
     <Provider store={store}>
-      <div className="w-full flex flex-col">
-        common
-        <main className="flex-grow">{children}</main>
+      <div className="w-full h-[100vh] overflow-hidden flex flex-col">
+        {children}
       </div>
     </Provider>
   );

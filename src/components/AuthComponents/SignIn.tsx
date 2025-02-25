@@ -4,6 +4,7 @@ import React from "react";
 import { redirect } from "next/navigation";
 
 export default function SignIn() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const authRedirect = function (e: any) {
     e.preventDefault();
     redirect("/admin/dashboard");
